@@ -1,8 +1,48 @@
-.food-icon {
-    height: 75px;
-    width: 75px;
+
+/** Introduction section **/
+#introduction {
+    text-align: center;
 }
 
-#meal-generator {
+/** Calculation Form section **/
+
+#calculation-form {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.information {
+    margin: 0.50em;
+    width: 10vw;
+}
+
+/** Results section **/
+
+#results {
+    text-align: center;
+}
+
+/** Meal Generator **/
+
+#meal-generator h2 {
+    text-align: center;
+}
+
+#meal-and-food-boxes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#food-choices {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.food-choise {
+    width: 75px;
+    height: 75px;
+    margin-bottom: 2.5vw;
 }

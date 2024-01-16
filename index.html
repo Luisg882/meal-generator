@@ -8,7 +8,7 @@
 </head>
 <body>
     <!--Introduction section-->
-    <div>
+    <div id="introduction">
       <h1>Welcome to Diet Meal Generator</h1> 
       <p>Every person needs an amount of calories to provide energy to get through the day. Sometimes we eat more calories than we actually need, here is when we gain weight, and sometimes we eat approximately how much we need. 
         When we make a diet we create a plan of meals that create what we call a caloric deficit, basically eat fewer calories than we need, which makes us use the glucose and fat reserves from our body as an energy source and lose weight.  
@@ -17,38 +17,56 @@
         </p>
     </div> 
     <!--Form to calculate the daily calories and caloric deficit-->
-    <div>
-        <form action="POST">
-            <input type="number" class="info" id="weight">
-            <label for="weight">weight</label>
-            <input type="number" class="info" id="height">
-            <label for="height">Height</label>
-            <input type="number" class="info" id="age">
-            <label for="age">Age</label>
-            <input type="radio" name="physical-active" id="physical-active">
-            <label for="physical-active">Physical active</label>
-            <input type="radio" name="sedentary" id="sedentary">
-            <label for="sedentary">Sedentary</label>
-            <input type="submit" value="Calculate">
-        </form>
+    <div id="calculation-form">
+            <label for="weight">Weight in Kilograms:</label>
+            <input type="number" class="information" id="weight">
+            <label for="height">Height in centimeters:</label>
+            <input type="number" class="information" id="height">
+            <label for="age">Age:</label>
+            <input type="number" class="information" id="age">
+            <label for="physical-active">Physical active:</label>
+            <select id="sex" name="sex">
+                <option value="man">Man</option>
+                <option value="woman">Woman</option>
+            </select>
+            <input type="submit" value="Calculate" id="submit" onclick="calculateCalories()">
     </div>
     <!--Results of the calculation-->
-    <div>
+    <div id="results">
         <h2>Daily Calories:</h2>
-        <h2>Caloric Deficit</h2>
-        <h2>Calories per Meal</h2>
+        <div id="daily-calories"></div>
+        <h2>Caloric Deficit:</h2>
+        <div id="caloric-deficit"></div>
+        <h2>Calories per Meal:</h2>
+        <div id="calories-per-meal"></div>
     </div>
     <!--Meal generator section-->
-    <div>   
-        <h2>Meal Generator</h2>
-        <div id="meal-generator">
-            <div id="meal">
-                <h3>Meal</h3>
-            </div>
+    <div id="meal-generator">   
+        <h2>Meal Generator:</h2>
+        <div id="meal-and-food-boxes">
             <div id="food">
-                <h3>Food</h3>
+                <h3>Food Choices:</h3>
+                <div id="food-choices">
+                    <img src="assets/images/boiled-egg.webp" alt="boiled egg" class="food-choise" id="boiled-egg">
+                    <img src="assets/images/bread-slice.webp" alt="slice of bread" class="food-choise" id="bread-slice">
+                    <img src="assets/images/brocoli.webp" alt="brocoli" class="food-choise" id="brocoli">
+                    <img src="assets/images/ham.webp" alt="ham" class="food-choise" id="ham">
+                    <img src="assets/images/babyleaf-salad.jpg" alt="babyleaf salad" class="food-choise" id="babyleaf-salad">
+                    <img src="assets/images/meat-stake.webp" alt="meat stake" class="food-choise" id="meat-stake">
+                    <img src="assets/images/pasta.webp" alt="pasta" class="food-choise" id="pasta">
+                    <img src="assets/images/rice.webp" alt="rice" class="food-choise" id="rice">
+                    <img src="assets/images/slice-cheese.webp" alt="slice of cheddat cheese" class="food-choise" id="slice-cheese">
+                    <img src="assets/images/tuna-steak.webp" alt="tuna steak" class="food-choise" id="tuna-steak">
+                </div>
+            </div>
+            <div id="meal">
+                <h3>Meal:</h3>
+                <div id="choiced-meal">
+
+                </div>
             </div>
         </div>
     </div>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
