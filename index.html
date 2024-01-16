@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!--Introduction section-->
+    <div>
+      <h1>Welcome to Diet Meal Generator</h1> 
+      <p>Every person needs an amount of calories to provide energy to get through the day. Sometimes we eat more calories than we actually need, here is when we gain weight, and sometimes we eat approximately how much we need. 
+        When we make a diet we create a plan of meals that create what we call a caloric deficit, basically eat fewer calories than we need, which makes us use the glucose and fat reserves from our body as an energy source and lose weight.  
+        Before we make your meal we first need to know how many calories you need per day and from here your caloric deficit. 
+        Lets calculate your daily caloric need and your caloric deficit
+        </p>
+    </div> 
+    <!--Form to calculate the daily calories and caloric deficit-->
+    <div>
+        <form action="POST">
+            <input type="number" class="info" id="weight">
+            <label for="weight">weight</label>
+            <input type="number" class="info" id="height">
+            <label for="height">Height</label>
+            <input type="number" class="info" id="age">
+            <label for="age">Age</label>
+            <input type="radio" name="physical-active" id="physical-active">
+            <label for="physical-active">Physical active</label>
+            <input type="radio" name="sedentary" id="sedentary">
+            <label for="sedentary">Sedentary</label>
+            <input type="submit" value="Calculate">
+        </form>
+    </div>
+    <!--Results of the calculation-->
+    <div>
+        <h2>Daily Calories:</h2>
+        <h2>Caloric Deficit</h2>
+        <h2>Calories per Meal</h2>
+    </div>
+    <!--Meal generator section-->
+    <div>   
+        <h2>Meal Generator</h2>
+        <div id="meal-generator">
+            <div id="meal">
+                <h3>Meal</h3>
+            </div>
+            <div id="food">
+                <h3>Food</h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

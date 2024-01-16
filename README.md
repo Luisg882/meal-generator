@@ -1,39 +1,7 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Meal Generator
 
-Welcome,
+One of the most difficult things about doing a diet is to make a meal that matches the calories needed and has the things that you like it's, or at least close to it. The purpose of this project is to create a web page that helps people create a meal for their diet given a selection of food like meat, rice, eggs and others so the user can choose what they want and it will calculate the caloric value and compare with the amount of calories that they need checking if it's going to break the diet or not.
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+The page is going to be divided into two sections. The first one is a form that will ask the user their weight, height, physical activity and age so it can calculate the amount of calories needed daily, then calculate the amount of calories needed to generate caloric deficits making them lose weight. The second section will be the meal generator, there is going to be two boxes one will be the food box were all the food options are going to be displayed, represented as buttons with a click event listener, and the other box is going to be the meal box were once the food is clicked from the food box is going to appear on this box and underneath is going to have a calorie calculator telling the user how many calories this meal will have. The calories of the meal are going to be compared with the result of the meal calories made in the first section, in the case that is surpassed is going to show a message warning the user that it surpasses the number of calories and suggests removing one of the ingredients. 
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
-
-## Codeanywhere Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
-
-`python3 -m http.server`
-
-A button should appear to click: _Open Preview_ or _Open Browser_.
-
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
-
-`http_server`
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A button should appear to click: _Open Preview_ or _Open Browser_.
-
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
----
-
-Happy coding!
+For propuses of this project, I decided to pick 10 food choices with the amount in grams or portions depending on the product. 
