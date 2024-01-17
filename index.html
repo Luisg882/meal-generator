@@ -34,11 +34,11 @@
     <!--Results of the calculation-->
     <div id="results">
         <h2>Daily Calories:</h2>
-        <div id="daily-calories"></div>
+        <p><span id="daily-calories"></span></p>
         <h2>Caloric Deficit:</h2>
-        <div id="caloric-deficit"></div>
+        <p><span id="caloric-deficit"></span></p> 
         <h2>Calories per Meal:</h2>
-        <div id="calories-per-meal"></div>
+        <p><span id="calories-per-meal"></span></p> 
     </div>
     <!--Meal generator section-->
     <div id="meal-generator">   
@@ -47,22 +47,56 @@
             <div id="food">
                 <h3>Food Choices:</h3>
                 <div id="food-choices">
-                    <img src="assets/images/boiled-egg.webp" alt="boiled egg" class="food-choise" id="boiled-egg">
-                    <img src="assets/images/bread-slice.webp" alt="slice of bread" class="food-choise" id="bread-slice">
-                    <img src="assets/images/brocoli.webp" alt="brocoli" class="food-choise" id="brocoli">
-                    <img src="assets/images/ham.webp" alt="ham" class="food-choise" id="ham">
-                    <img src="assets/images/babyleaf-salad.jpg" alt="babyleaf salad" class="food-choise" id="babyleaf-salad">
-                    <img src="assets/images/meat-stake.webp" alt="meat stake" class="food-choise" id="meat-stake">
-                    <img src="assets/images/pasta.webp" alt="pasta" class="food-choise" id="pasta">
-                    <img src="assets/images/rice.webp" alt="rice" class="food-choise" id="rice">
-                    <img src="assets/images/slice-cheese.webp" alt="slice of cheddat cheese" class="food-choise" id="slice-cheese">
-                    <img src="assets/images/tuna-steak.webp" alt="tuna steak" class="food-choise" id="tuna-steak">
+                    <div class="button-display">
+                        <button class="food-choise" id="boiled-egg" value="72" src="assets/images/boiled-egg.webp"></button>
+                        <label for="boiled-egg">1 Boiled Egg</label>
+                    </div>
+                    <div class="button-display">
+                        <button class="food-choise" id="bread-slice" value="82" src="assets/images/bread-slice.webp"></button>
+                        <label for="bread-slice">1 Slice of Bread</label>
+                    </div>
+                    <div class="button-display">
+                        <button class="food-choise" id="broccoli" value="100" src="assets/images/brocoli.webp"></button>
+                        <label for="broccoli">Broccoli 100gr</label>
+                    </div>
+                    <div class="button-display">
+                        <button class="food-choise" id="ham" value="145" src="assets/images/ham.webp"></button>
+                        <label for="ham">1 Slice of Ham</label>
+                    </div>
+                    <div class="button-display">
+                        <button class="food-choise" id="babyleaf-salad" value="31" src="assets/images/babyleaf-salad.jpg"></button>
+                        <label for="babyleaf-salad">Babylieaf salad 100gr</label>
+                    </div>
+                    <div class="button-display">
+                        <button class="food-choise" id="meat-stake" value="143" src="assets/images/meat-stake.webp"></button>
+                        <label for="meat-stake">Meat Stake 100gr</label>
+                    </div>
+                    <div class="button-display">
+                        <button class="food-choise" id="pasta" value="131" src="assets/images/pasta.webp"></button>
+                        <label for="pasta">Pasta 100gr</label>
+                    </div>
+                    <div class="button-display">
+                        <button class="food-choise" id="rice" value="130" src="assets/images/rice.webp"></button>
+                        <label for="rice">Rice 100gr</label>
+                    </div>
+                    <div class="button-display">
+                        <button class="food-choise" id="slice-cheese" value="113" src="assets/images/slice-cheese.webp"></button>
+                        <label for="slice-cheese">1 Slice of Cheese</label>
+                    </div>
+                    <div class="button-display">
+                        <button class="food-choise" id="tuna-steak" value="143" src="assets/images/tuna-steak.webp"></button>
+                        <label for="tuna-steak">Tuna Steak 100gr</label>
+                    </div>
                 </div>
             </div>
             <div id="meal">
                 <h3>Meal:</h3>
                 <div id="choiced-meal">
 
+                </div>
+                <div>
+                    <h3>Total Meal Calories</h3>
+                    <p><span id="total-meal-calories">0</span></p>
                 </div>
             </div>
         </div>

@@ -1,4 +1,10 @@
+image {
+    height: 75;
+}
 
+label {
+    font-size: 10px;
+}
 /** Introduction section **/
 #introduction {
     text-align: center;
@@ -45,4 +51,51 @@
     width: 75px;
     height: 75px;
     margin-bottom: 2.5vw;
+}
+
+/** Stiling of every food choise **/
+.button-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#boiled-egg {
+    background-image: url(../images/boiled-egg.webp);
+}
+
+#bread-slice {
+    background-image: url(../images/bread-slice.webp);
+}
+
+#broccoli {
+    background-image: url(../images/brocoli.webp);
+}
+
+#ham {
+    background-image: url(../images/ham.webp);
+}
+
+#babyleaf-salad {
+    background-image: url(../images/babyleaf-salad.jpg);
+}
+
+#meat-stake {
+    background-image: url(../images/meat-stake.webp);
+}
+
+#pasta {
+    background-image: url(../images/pasta.webp);
+}
+
+#rice {
+    background-image: url(../images/rice.webp);
+}
+
+#slice-cheese {
+    background-image: url(../images/slice-cheese.webp);
+}
+
+#tuna-steak {
+    background-image: url(../images/tuna-steak.webp);
 }
