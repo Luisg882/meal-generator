@@ -62,6 +62,8 @@ label {
 
 #boiled-egg {
     background-image: url(../images/boiled-egg.webp);
+    width: 75px;
+    height: 75px;
 }
 
 #bread-slice {
