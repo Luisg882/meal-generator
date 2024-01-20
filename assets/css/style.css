@@ -1,15 +1,40 @@
-image {
-    height: 75;
-}
+/*imported fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Raleway:wght@400&display=swap');
+/*General styling*/
 
 label {
     font-size: 10px;
-}
-/** Introduction section **/
-#introduction {
-    text-align: center;
+    font-weight: bold;
 }
 
+body {
+    min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	font-family: 'Raleway', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Oswald";
+}
+/**Header**/
+
+#name {
+    display: flex;
+    align-items: center;
+    border-bottom: solid;
+}
+
+#logo {
+    height: 65px;
+}
+/** Introduction section **/
+
+#introduction-content {
+    text-align: center;
+}
 /** Calculation Form section **/
 
 #calculation-form {
@@ -50,7 +75,12 @@ label {
 .food-choise {
     width: 75px;
     height: 75px;
-    margin-bottom: 2.5vw;
+}
+
+#choiced-meal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 /** Stiling of every food choise **/
@@ -61,43 +91,64 @@ label {
 }
 
 #boiled-egg {
-    background-image: url(../images/boiled-egg.webp);
-    width: 75px;
-    height: 75px;
+    background: url(../images/boiled-egg.webp) no-repeat center center/cover;
 }
 
 #bread-slice {
-    background-image: url(../images/bread-slice.webp);
+    background: url(../images/bread-slice.webp) no-repeat center center/cover;
 }
 
 #broccoli {
-    background-image: url(../images/brocoli.webp);
+    background: url(../images/brocoli.webp) no-repeat center center/cover;
 }
 
 #ham {
-    background-image: url(../images/ham.webp);
+    background: url(../images/ham.webp) no-repeat center center/cover;
 }
 
 #babyleaf-salad {
-    background-image: url(../images/babyleaf-salad.jpg);
+    background: url(../images/babyleaf-salad.jpg) no-repeat center center/cover; 
 }
 
 #meat-stake {
-    background-image: url(../images/meat-stake.webp);
+    background: url(../images/meat-stake.webp) no-repeat center center/cover;
 }
 
 #pasta {
-    background-image: url(../images/pasta.webp);
+    background: url(../images/pasta.webp) no-repeat center center/cover;
 }
 
 #rice {
-    background-image: url(../images/rice.webp);
+    background: url(../images/rice.webp) no-repeat center center/cover;
 }
 
 #slice-cheese {
-    background-image: url(../images/slice-cheese.webp);
+    background: url(../images/slice-cheese.webp) no-repeat center center/cover;
 }
 
 #tuna-steak {
-    background-image: url(../images/tuna-steak.webp);
+    background: url(../images/tuna-steak.webp) no-repeat center center/cover;
+}
+
+/**Footer**/
+
+footer {
+    background-color: black;
+}
+
+footer h5 {
+    text-align: center;
+    color: white;
+}
+
+#social-media-links {
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+    padding-left: 0px;
+}
+
+footer a {
+    color: white;
 }

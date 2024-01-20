@@ -5,38 +5,24 @@
  */
 
 document.addEventListener("DOMContentLoaded", function() {
-   let foodButtons = document.getElementsByClassName('food-choise');
-   let choicedMeal = document.getElementById('choiced-meal');
-
+   let foodButtons = document.getElementsByClassName("food-choise");
+   let choicedMeal = document.getElementById("choiced-meal");
+   
    for (let button of foodButtons) {
       button.addEventListener("click", function() {
-         // Create a new button element
          let newButton = document.createElement('button');
-
-         // Set the id for the new button (same as the clicked button)
          newButton.id = this.id;
-
-         // Set other attributes for the new button
          newButton.value = this.getAttribute('value');
-         newButton.src = this.getAttribute('src');
-
-         // Add a click event listener to the new button
+         newButton.classList = this.getAttribute('class');
          newButton.addEventListener("click", function() {
-            // Remove the clicked button from the choicedMeal
             choicedMeal.removeChild(newButton);
-            removeTotal(parseInt(this.getAttribute('value')))
+            removeTotal(parseInt(this.getAttribute('value')));
          });
 
-         // Append the new button to the existing content
          choicedMeal.appendChild(newButton);
 
-
-         // Log the value attribute of the clicked button
-         console.log(parseInt(this.getAttribute('value')));
-
-         // Call the mealCaloriesCounter function with the value attribute
          mealCaloriesCounter(parseInt(this.getAttribute('value')));
-      })
+      });
    }
 });
 
@@ -46,47 +32,45 @@ document.addEventListener("DOMContentLoaded", function() {
  */
 
 function calculateCalories() {
-   //Create variables for each element
    let weight = parseFloat(document.getElementById("weight").value);
    let height = parseFloat(document.getElementById("height").value);
    let age = parseInt(document.getElementById("age").value);
-   let sex = document.getElementById("sex").value; 
-   let dailyCalories = document.getElementById("daily-calories")
-   
-   //Calculation of the daily calories for man and woman
+   let sex = document.getElementById("sex").value;
+   let dailyCalories = document.getElementById("daily-calories");
+
    let manCalculation = (10 * weight) + (6.25 * height) - (5 * age) + 5;
    let womanCalculation = (10 * weight) + (6.25 * height) - (5 * age) - 161;
    
-   if (sex == "man") {
-      dailyCalories.innerHTML = manCalculation
-      console.log(dailyCalories.innerText)
-      calculateCaloricDeficit(dailyCalories.innerText)
+   if (sex === "man") {
+      dailyCalories.innerHTML = manCalculation;
+      calculateCaloricDeficit(dailyCalories.innerText);
    } else {
-      dailyCalories.innerHTML = womanCalculation
-      calculateCaloricDeficit(dailyCalories.innerText)
+      dailyCalories.innerHTML = womanCalculation;
+      calculateCaloricDeficit(dailyCalories.innerText);
    }
 }
 
 /**
  * Calculation of the caloric deficit
+ * by substracting 20% of the daily calories
  */
 
-function calculateCaloricDeficit(number) {
-   let caloricDeficit = number - (number * 0.2);
+function calculateCaloricDeficit(num) {
    let deficit = document.getElementById("caloric-deficit");
+   let caloricDeficit = num - (num * 0.2);
    deficit.innerHTML = caloricDeficit;
    calculateCaloriesPerMeal(deficit.innerText)
 }
 
 /**
  * This function calculates the amount of calories 
- * per meal
+ * per meal by calculating the 30% of the caloric benefit
  */
 
-function calculateCaloriesPerMeal (number) {
-   let caloriesPerMeal = number * 0.3;
-   let mealCalores = document.getElementById("calories-per-meal");
-   mealCalores.innerHTML = caloriesPerMeal;
+function calculateCaloriesPerMeal (num) {
+   let mealCalories = document.getElementById("calories-per-meal");
+   let caloriesPerMeal = num * 0.3;
+   mealCalories.innerHTML = caloriesPerMeal;
 }
 
 /**
@@ -97,7 +81,7 @@ function calculateCaloriesPerMeal (number) {
  */
 function mealCaloriesCounter(num) {
    let totalMealCalories = parseInt(document.getElementById('total-meal-calories').innerText);
-   let calories = document.getElementById('total-meal-calories');
+   let calories = document.getElementById('total-meal-calories')
    calories.innerHTML = totalMealCalories + num;
    compareCalories(calories)
 }
@@ -107,17 +91,21 @@ function mealCaloriesCounter(num) {
  * calories per meal with the meal choice 
  * in case that surpasses it will give an alert
  */
-function compareCalories (num) {
-   let caloresPerMeal = parseInt(document.getElementById("calories-per-meal").innerText);
+function compareCalories(num) {
+   let caloriesPerMeal = parseInt(document.getElementById("calories-per-meal").innerText);
    let caloriesInMeal = parseInt(num.innerText);
-   let reduce = caloriesInMeal - caloresPerMeal
-   console.log(parseInt(caloriesInMeal))
-   console.log(parseInt(caloresPerMeal))
-   console.log(reduce)
-   if (parseInt(caloriesInMeal) > caloresPerMeal) {
-      console.log("to much")
-      alert (`is to much you have to reduce ${reduce}`)
-   } else {
-      console.log("is ok")
-   }
+   let reduce = caloriesInMeal - caloriesPerMeal
+   if (caloriesInMeal > caloriesPerMeal) {
+      alert (`Is to much. You have to reduce ${reduce}`)
+   } 
+}
+
+/**
+ * This function will substract the calories from the total 
+ * meal calories wen the user remove the food selected from
+ * the meal choiced meal
+ */
+function removeTotal(num) {
+   let totalMealCalories = parseInt(document.getElementById("total-meal-calories").innerText);
+   document.getElementById("total-meal-calories").innerHTML = totalMealCalories - parseInt(num);
 }
