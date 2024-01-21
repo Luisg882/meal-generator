@@ -35,9 +35,9 @@ h3 {
 #introduction {
     text-align: center;
 }
-/** Calculation Form section **/
+/**Personal information section **/
 
-#calculation-form {
+#personal-information {
     display: flex;
     flex-direction: column;
     align-items: center;
