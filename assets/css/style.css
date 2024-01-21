@@ -1,5 +1,5 @@
 /*imported fonts*/
-@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Raleway:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Raleway:wght@500&display=swap');
 /*General styling*/
 
 label {
@@ -28,11 +28,11 @@ h3 {
 }
 
 #logo {
-    height: 65px;
+    height: 70px;
 }
 /** Introduction section **/
 
-#introduction-content {
+#introduction {
     text-align: center;
 }
 /** Calculation Form section **/
@@ -48,6 +48,10 @@ h3 {
     width: 10vw;
 }
 
+#sex {
+    margin: 8px;
+}
+
 /** Results section **/
 
 #results {
@@ -56,7 +60,10 @@ h3 {
 
 /** Meal Generator **/
 
-#meal-generator h2 {
+#meal-generator h2, 
+h3,
+h4,
+p {
     text-align: center;
 }
 
@@ -151,4 +158,63 @@ footer h5 {
 
 footer a {
     color: white;
+}
+
+/** Media query for devices wider than 768 px **/
+@media screen and (min-width: 768px){
+    /**General*/
+    
+    body {
+        margin: 0 8vw;
+    }
+
+    /**Header*/
+
+    #name {
+        justify-content: center;
+    }
+    #logo {
+        margin: 0 1vw;
+    }
+
+    /**Introduction Section*/
+
+    #introduction p {
+        margin: 3vw 3vw;
+    }
+
+    /**Meal Generator**/
+
+    .food-choise {
+        width: 100px;
+        height: 100px;
+        margin: 5px 2vw;
+    }
+}
+
+/** Media query for devices wider than 1020 px **/
+@media screen and (min-width: 1020px) {
+    /**General**/
+    body {
+        font-size: x-large;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    /**Header**/
+    #logo {
+        height: 90px;
+    }
+
+    /**Introduction section**/
+    .information {
+        margin: 11px;
+        width: 46px;
+    }
+
+    #introduction p {
+        margin: 24px 56px;
+    }
 }
