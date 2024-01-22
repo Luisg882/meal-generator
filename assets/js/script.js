@@ -3,13 +3,16 @@
  * to all food choices making them 
  * appear on the choiceMeal section
  */
-
 document.addEventListener("DOMContentLoaded", function() {
    let foodButtons = document.getElementsByClassName("food-choise");
    let choicedMeal = document.getElementById("choiced-meal");
+   let caloriesPerMeal = parseInt(document.getElementById("calories-per-meal").innerText)
    
    for (let button of foodButtons) {
       button.addEventListener("click", function() {
+         if (caloriesPerMeal === 0) {
+            alert `You need to calculate the Calories per Meal first. `
+         }else {
          let newButton = document.createElement('button');
          newButton.id = this.id;
          newButton.value = this.getAttribute('value');
@@ -22,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
          choicedMeal.appendChild(newButton);
 
          mealCaloriesCounter(parseInt(this.getAttribute('value')));
+      }
       });
    }
 });
@@ -30,23 +34,25 @@ document.addEventListener("DOMContentLoaded", function() {
  * Function to calculate the amounth of calories, 
  * caloric deficit and calories per meal
  */
-
 function calculateCalories() {
-   let weight = parseFloat(document.getElementById("weight").value);
-   let height = parseFloat(document.getElementById("height").value);
+   let weight = parseInt(document.getElementById("weight").value);
+   let height = parseInt(document.getElementById("height").value);
    let age = parseInt(document.getElementById("age").value);
    let sex = document.getElementById("sex").value;
    let dailyCalories = document.getElementById("daily-calories");
 
    let manCalculation = (10 * weight) + (6.25 * height) - (5 * age) + 5;
    let womanCalculation = (10 * weight) + (6.25 * height) - (5 * age) - 161;
+
    
-   if (sex === "man") {
+   if (sex === "man" && weight > 10 && height > 90 && age > 7) {
       dailyCalories.innerHTML = manCalculation;
       calculateCaloricDeficit(dailyCalories.innerText);
-   } else {
+   } else if (sex === "woman" && weight > 10 && height > 90 && age > 7) {
       dailyCalories.innerHTML = womanCalculation;
       calculateCaloricDeficit(dailyCalories.innerText);
+   } else {
+      alert `insert right values to make the calculation`
    }
 }
 
@@ -54,7 +60,6 @@ function calculateCalories() {
  * Calculation of the caloric deficit
  * by substracting 20% of the daily calories
  */
-
 function calculateCaloricDeficit(num) {
    let deficit = document.getElementById("caloric-deficit");
    let caloricDeficit = num - (num * 0.2);
@@ -66,7 +71,6 @@ function calculateCaloricDeficit(num) {
  * This function calculates the amount of calories 
  * per meal by calculating the 30% of the caloric benefit
  */
-
 function calculateCaloriesPerMeal (num) {
    let mealCalories = document.getElementById("calories-per-meal");
    let caloriesPerMeal = num * 0.3;

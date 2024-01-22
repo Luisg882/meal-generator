@@ -25,17 +25,17 @@
         <!--Personal data section used to calculate the daily calories and caloric deficit-->
         <div id="personal-information">
                 <label for="weight">Weight in Kilograms:</label>
-                <input type="number" class="information" id="weight">
+                <input type="number" class="information" id="weight" min="10" required>
                 <label for="height">Height in centimeters:</label>
-                <input type="number" class="information" id="height">
+                <input type="number" class="information" id="height" min="90" required>
                 <label for="age">Age:</label>
-                <input type="number" class="information" id="age">
+                <input type="number" class="information" id="age" min="7" required>
                 <label for="sex">Sex</label>
                 <select id="sex" name="sex">
                     <option value="man">Man</option>
                     <option value="woman">Woman</option>
                 </select>
-                <input type="submit" value="Calculate" id="submit" onclick="calculateCalories()">
+                <input type="submit" value="Calculate" id="submit">
         </div>
         <!--Results of the calculation-->
         <div id="results">
