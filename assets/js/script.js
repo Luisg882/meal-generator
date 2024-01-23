@@ -50,7 +50,6 @@ function calculateCalories() {
    } else if (sex === "woman" && weight >= 10 && height >= 90 && age >= 7) {
       dailyCalories.innerHTML = womanCalculation;
       calculateCaloricDeficit(dailyCalories.innerText);
-      foodChoices.style.display = "flex"
    } else {
       alert `Insert right values to make the calculation. Weight have to be a minimun of 22 kilograms, minimun height 90 and miimun age of 7 years`
    }

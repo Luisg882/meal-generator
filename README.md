@@ -98,7 +98,9 @@ The page is going to be divided into two sections. The first one is a  that will
 - **Git** - used as IDE to control and track the project progression.
 - **Python Tutor** - used to check the errors, understand and correct the functions.
 
-
+## Testing
+- Tested in Google Chrome, Firefox and Edge browsers.
+- Website is responsive in all browsers
 
 
 
