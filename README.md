@@ -23,6 +23,7 @@ The page is going to be divided into two sections. The first one is a  that will
     - In this section, there is a series of inputs asking for information about weight, height, age and sex.
     - This information is used later to calculate the amount of daily calories, caloric deficit and how many calories they need per meal.
     - A submit button is going to trigger the JavaScript to make this calculation.
+    - Each of the inputs will have a validation: Wight is a minimun of 10 kilograms, height a minimun of 90 centimeters and a minumun age of 7. All this values are standars for a 7 years girl
 
     ![image of the personal information section showing the weight, height, age, sex and the submit button](/assets/images/personal-information.webp)
 
@@ -35,6 +36,7 @@ The page is going to be divided into two sections. The first one is a  that will
 - **Caloric Deficit**
     - In this section, we calculate the caloric deficit by subtracting 20% of the daily calories.
     - This result is calculated after clicking the calculate button.
+    - If the personal information doesn't past the validation an Alert message is going to appar advicing the user to modify the values and provide the minimun values, also the calculation is not going to happen.
 
     ![image of the caloric deficit before submitting the personal information, value of 0](/assets/images/caloric-deficit-0.webp)
     ![image of the caloric deficit after submitting the personal information, value of 1486](/assets/images/caloric-deficit.webp)
@@ -55,6 +57,7 @@ The page is going to be divided into two sections. The first one is a  that will
 - **Food Choices**
     - This section has all the food choices available, for this project, it was picked 10 food choices, 5 of them were proteins and the other 5 were carbohydrates to balance the diet.
     - When clicked they are going to appear on the Meal section.
+    - This section is going to remain hidden until the user makes the calcualtion of his caloric needs.
 
     ![image of the food choices](/assets/images/food-selection.webp)
 
@@ -77,7 +80,23 @@ The page is going to be divided into two sections. The first one is a  that will
 
     ![image of the footer with the logos of the different social media pages](/assets/images/footer.webp)
 
+## Features left to implement
+   - A recipe generator to give selection of recipes for the choiced food.
+   - A search option to fetch a food choice for an API and put it on the food choices.
 
+## Technologies Used
+**Languages Used**
+- HTML5.
+- CSS3.
+- JavaScript ES6.
+
+**Libraries and programs used**
+- **Grammarly** - used to correct misspellings and grammar mistakes.
+- **Font Awesome** - to get social media icons.
+- **Google Fonts** - Oswald and Raleway fonts were used on the website.
+- **Invision** - to make early sketches of the website.
+- **Git** - used as IDE to control and track the project progression.
+- **Python Tutor** - used to check the errors, understand and correct the functions.
 
 
 
