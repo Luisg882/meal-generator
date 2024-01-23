@@ -100,7 +100,26 @@ The page is going to be divided into two sections. The first one is a  that will
 
 ## Testing
 - Tested in Google Chrome, Firefox and Edge browsers.
-- Website is responsive in all browsers
+- Website is responsive in all browsers.
+- All Social Media icons open in a new tab.
+- Food choices work porperlly.
+- Calculation button works properlly.
+- Food choices added to the Meal section work properlly.
+
+**Functional Testing**
+  - **Personal Information Buttons**
+    - Try to put negative numbers in the personal information section and it shows the alert message to make the changes
+    - If you try to use the up and down arrows on the inputs will begin with the minimun allowed and won't ler you go below it.
+  - **Calculate Button**
+    - Daily Calories, Caloric Deficit and Calories per Meal show the correct value for each section.
+    - The food choices remind hiden until the calculation is completed.
+  - **Food Choices Buttons**
+    - All food choices are added to the choiced meal section Properlly after being clicked.
+    - Adds the caloric value to the Total Meal Calories section.
+    - The message alert shows every time the user surpass the limit, even if the pass it and press another food choice again it will show again with a higer value to reduce in the meal.
+  - **Chosen Meal Buttons**
+    - Clicking the chosen food on the meal section removes the option
+    - Subtract the value on the total meal calories section.
 
 
 

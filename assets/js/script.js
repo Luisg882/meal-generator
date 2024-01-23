@@ -98,11 +98,14 @@ function mealCaloriesCounter(num) {
 function compareCalories(num) {
    const caloriesPerMeal = parseInt(document.getElementById("calories-per-meal").innerText);
    const caloriesInMeal = parseInt(num.innerText);
+   let foodButtons = document.getElementsByClassName("food-choice");
    let reduce = caloriesInMeal - caloriesPerMeal
    if (caloriesInMeal > caloriesPerMeal) {
       alert (`Is to much. You have to reduce ${reduce}`)
    } 
 }
+
+
 
 /**
  * This function will substract the calories from the total 
