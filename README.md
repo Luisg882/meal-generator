@@ -27,7 +27,7 @@ The page is going to be divided into two sections. The first one is a  that will
     - In case the values are lesser than the minimum requirement the calculation is not going to happen and an alert message is going to show saying "Insert the right values to make the calculation. Weight has to be a minimum of 22 kilograms, minimum height 90 and minimum age of 7 years".
     
     ![image of the personal information section showing the weight, height, age, sex and the submit button](/assets/images/personal-information.webp)
-    ![image of the alert message when the minimum values don't correspond](/assets/images/alert-message-personal-information.png)
+    ![image of the alert message when the minimum values don't correspond](/assets/images/alert-message-personal-information.webp)
 
 - **Daily Calories**
     - In this section, we calculate the number of calories needed by following the basal metabolic rate (BMR), which is 10 * weight (kg) + 6.25 * height(cm) - 5 * age(y) + 5 for man and 10 * weight(kg) + 6.25 * height(cm) - 5 * age(y) - 161 for ​woman, with the personal information taking before.
