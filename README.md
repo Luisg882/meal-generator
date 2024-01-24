@@ -137,12 +137,14 @@ The page is going to be divided into two sections. The first one is a  that will
 
   - The food choices didn't appear hidden wen the document was first loaded. Add the stily.display methos to the foodChoices with a value of "none" wen the page loades so it remain hidden like this: foodChoices.style.display = "none"
  **Validator Testing**
-   - HTML
+  - HTML
      - No errors were found on the W3C validator.
   - CSS
     - No errors found in W3C (Jigsaw) validator.
   - Accesibily
     - Perform a lighthouse test.
+  - Java Script
+    - ESLint was used and no errors were find.
 
 **Unfixed Bugs**
  - No Unfixed bugs.
