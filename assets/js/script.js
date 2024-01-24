@@ -51,7 +51,8 @@ function calculateCalories() {
        dailyCalories.innerHTML = womanCalculation;
        calculateCaloricDeficit(dailyCalories.innerText);
    } else {
-       alert `Insert the right values to make the calculation. Weight has to be a minimum of 22 kilograms, minimum height 90 and minimum age of 7 years`
+       alert `Insert the right values to make the calculation. Weight has to be a minimum of
+        22 kilograms, minimum height 90 and minimum age of 7 years`
    }
 
 }
