@@ -136,7 +136,31 @@ The page is going to be divided into two sections. The first one is a  that will
    }
 
   - The food choices didn't appear hidden wen the document was first loaded. Add the stily.display methos to the foodChoices with a value of "none" wen the page loades so it remain hidden like this: foodChoices.style.display = "none"
- 
+ **Validator Testing**
+   - HTML
+     - No errors were found on the W3C validator.
+  - CSS
+    - No errors found in W3C (Jigsaw) validator.
+  - Accesibily
+    - Perform a lighthouse test.
+
+**Unfixed Bugs**
+ - No Unfixed bugs.
+
+## Deployment ##
+- The deployment was done on GitHub pages as follows:
+    - Open the settings section on the repertory.
+    - Click the option of pages on the left sidebar.
+    - Select the master branch in the source section.
+
+
+Live link [SuperPhysio](https://luisg882.github.io/Super-Physio-main/index.html).
+
+## Credits ##
+- The CSS basic structure and footer of the page were taken from [Love running](https://luisg882.github.io/Love-Run/)
+
+## Media ##
+
 
 
 

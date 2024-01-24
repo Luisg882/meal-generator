@@ -1,120 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Meal Generator</title>
-</head>
-<body>
-    <header>
-        <div id="name">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=, initial-scale=1.0">
+      <!--Meta Data-->
+      <meta 
+         name="description" 
+         content="Meal Generator. Calculate the calories needed per day, the caloric deficit, and the amount of calories you need per day. Then provide a series of food choices where the user can choose what he wants, creating a meal and calculating how many calories will have in that meal, this value is going to be compared with the number of calories he needs per day"
+         />
+      <meta
+         name="keywords"
+         content="Meal Generator, Meal, Calories, Caloric Deficit, Calories per meal, Diet, Weight loss, Health, Food"
+         />
+      <!--Title-->
+      <title>Meal Generator</title>
+      <!--Favicon-->
+      <link rel="icon" type="image/webp" href="assets/images/logo.webp" />
+      <!--Css Style link-->
+      <link rel="stylesheet" href="assets/css/style.css" />
+   </head>
+   <body>
+      <header>
+         <div id="name">
             <img src="assets/images/logo.webp" alt="logo" id="logo">
             <h1>Meal Generator</h1>
-        </div>
-    </header>
-    <!--Introduction section-->
-    <main>
-            <div id="introduction">
-                <h2>Embark on the journey of weight loss</h2>
-                <p>Understanding and managing your calorie intake is a key factor.
-                     Calculate your daily caloric needs and establish an optimal caloric deficit, which involves consuming fewer calories than your body requires (caloric deficit).<br>
-                     Insert your personal information underneat to know the amount of calories that you need
-                  </p>
-              </div> 
-        <!--Personal data section used to calculate the daily calories and caloric deficit-->
-        <div id="personal-information">
-          <label for="weight">Weight in Kilograms:</label>
-          <input type="number" class="information" id="weight" min="10" required>
-          <label for="height">Height in centimeters:</label>
-          <input type="number" class="information" id="height" min="90" required>
-          <label for="age">Age:</label>
-          <input type="number" class="information" id="age" min="7" required>
-          <label for="sex">Sex</label>
-          <select id="sex" name="sex">
-              <option value="man">Man</option>
-              <option value="woman">Woman</option>
-          </select>
-          <input type="submit" value="Calculate" id="submit" onclick="calculateCalories()">
-        </div>
-        <!--Results of the calculation-->
-        <div id="results">
+         </div>
+      </header>
+      <!--Introduction section-->
+      <main>
+         <div id="introduction">
+            <h2>Embark on the journey of weight loss</h2>
+            <p>Understanding and managing your calorie intake is a key factor.
+               Calculate your daily caloric needs and establish an optimal caloric deficit, which involves consuming fewer calories than your body requires (caloric deficit).<br>
+               Insert your personal information underneath to know the amount of calories that you need
+            </p>
+         </div>
+         <!--Personal data section used to calculate the daily calories and caloric deficit-->
+         <div id="personal-information">
+            <label for="weight">Weight in Kilograms:</label>
+            <input type="number" class="information" id="weight" min="10" required>
+            <label for="height">Height in centimeters:</label>
+            <input type="number" class="information" id="height" min="90" required>
+            <label for="age">Age:</label>
+            <input type="number" class="information" id="age" min="7" required>
+            <label for="sex">Sex</label>
+            <select id="sex" name="sex">
+               <option value="man">Man</option>
+               <option value="woman">Woman</option>
+            </select>
+            <input type="submit" value="Calculate" id="submit" onclick="calculateCalories()">
+         </div>
+         <!--Results of the calculation-->
+         <div id="results">
             <h3>Daily Calories:</h3>
             <p><span id="daily-calories">0</span></p>
             <h3>Caloric Deficit:</h3>
-            <p><span id="caloric-deficit">0</span></p> 
+            <p><span id="caloric-deficit">0</span></p>
             <h3>Calories per Meal:</h3>
-            <p><span id="calories-per-meal">0</span></p> 
-        </div>
-        <!--Meal generator section-->
-        <div id="meal-generator"> 
-            <h2>What's is Next?</h2>  
-            <p>Now that we know how much calories you need you can create a hole Meal
-                by yourself. Just choose what you want and we will count the calories for you.
-                If you pass the calories needed we will let you know.
+            <p><span id="calories-per-meal">0</span></p>
+         </div>
+         <!--Meal generator section-->
+         <div id="meal-generator">
+            <h2>What's is Next?</h2>
+            <p>Now that we know how many calories you need you can create a whole Meal
+               by yourself. Just choose what you want and we will count the calories for you.
+               If you pass the calories needed we will let you know.
             </p>
             <h3>Meal Generator:</h3>
             <div id="meal-and-food-boxes">
-                <div id="food">
-                    <h4>Food Choices:</h4>
-                    <div id="food-choices">
-                        <div class="button-display">
-                            <button class="food-choise" id="boiled-egg" value="72" aria-label="boiled-egg"></button>
-                            <label for="boiled-egg" class="food-label">1 Boiled Egg</label>
-                        </div>
-                        <div class="button-display">
-                            <button class="food-choise" id="bread-slice" value="82" aria-label="bread-slice"></button>
-                            <label for="bread-slice" class="food-label">1 Slice of Bread</label>
-                        </div>
-                        <div class="button-display">
-                            <button class="food-choise" id="broccoli" value="100" aria-label="broccoli"></button>
-                            <label for="broccoli" class="food-label">Broccoli 100gr</label>
-                        </div>
-                        <div class="button-display">
-                            <button class="food-choise" id="ham" value="145" aria-label="ham"></button>
-                            <label for="ham" class="food-label">1 Slice of Ham</label>
-                        </div>
-                        <div class="button-display">
-                            <button class="food-choise" id="babyleaf-salad" value="31" aria-label="babyleaf-salad"></button>
-                            <label for="babyleaf-salad" class="food-label">Babylieaf salad 100gr</label>
-                        </div>
-                        <div class="button-display">
-                            <button class="food-choise" id="meat-stake" value="143" aria-label="meat-stake"></button>
-                            <label for="meat-stake" class="food-label">Meat Stake 100gr</label>
-                        </div>
-                        <div class="button-display">
-                            <button class="food-choise" id="pasta" value="131" aria-label="pasta"></button>
-                            <label for="pasta" class="food-label">Pasta 100gr</label>
-                        </div>
-                        <div class="button-display">
-                            <button class="food-choise" id="rice" value="130" aria-label="rice"></button>
-                            <label for="rice" class="food-label">Rice 100gr</label>
-                        </div>
-                        <div class="button-display">
-                            <button class="food-choise " id="slice-cheese" value="113" aria-label="slice-cheese"></button>
-                            <label for="slice-cheese" class="food-label">1 Slice of Cheese</label>
-                        </div>
-                        <div class="button-display">
-                            <button class="food-choise" id="tuna-steak" value="143" aria-label="tuna-steak"></button>
-                            <label for="tuna-steak" class="food-label">Tuna Steak 100gr</label>
-                        </div>
-                    </div>
-                </div>
-                <div id="meal">
-                    <h4>Meal:</h4>
-                    <div id="choiced-meal">
-                    </div>
-                    <div>
-                        <h4>Total Meal Calories</h4>
-                        <p><span id="total-meal-calories">0</span></p>
-                    </div>
-                </div>
+               <div id="food">
+                  <h4>Food Choices:</h4>
+                  <div id="food-choices">
+                     <div class="button-display">
+                        <button class="food-choice" id="boiled-egg" value="72" aria-label="boiled-egg"></button>
+                        <label for="boiled-egg" class="food-label">1 Boiled Egg</label>
+                     </div>
+                     <div class="button-display">
+                        <button class="food-choice" id="bread-slice" value="82" aria-label="bread-slice"></button>
+                        <label for="bread-slice" class="food-label">1 Slice of Bread</label>
+                     </div>
+                     <div class="button-display">
+                        <button class="food-choice" id="broccoli" value="100" aria-label="broccoli"></button>
+                        <label for="broccoli" class="food-label">Broccoli 100gr</label>
+                     </div>
+                     <div class="button-display">
+                        <button class="food-choice" id="ham" value="145" aria-label="ham"></button>
+                        <label for="ham" class="food-label">1 Slice of Ham</label>
+                     </div>
+                     <div class="button-display">
+                        <button class="food-choice" id="babyleaf-salad" value="31" aria-label="babyleaf-salad"></button>
+                        <label for="babyleaf-salad" class="food-label">Babylieaf salad 100gr</label>
+                     </div>
+                     <div class="button-display">
+                        <button class="food-choice" id="meat-stake" value="143" aria-label="meat-stake"></button>
+                        <label for="meat-stake" class="food-label">Meat Stake 100gr</label>
+                     </div>
+                     <div class="button-display">
+                        <button class="food-choice" id="pasta" value="131" aria-label="pasta"></button>
+                        <label for="pasta" class="food-label">Pasta 100gr</label>
+                     </div>
+                     <div class="button-display">
+                        <button class="food-choice" id="rice" value="130" aria-label="rice"></button>
+                        <label for="rice" class="food-label">Rice 100gr</label>
+                     </div>
+                     <div class="button-display">
+                        <button class="food-choice " id="slice-cheese" value="113" aria-label="slice-cheese"></button>
+                        <label for="slice-cheese" class="food-label">1 Slice of Cheese</label>
+                     </div>
+                     <div class="button-display">
+                        <button class="food-choice" id="tuna-steak" value="143" aria-label="tuna-steak"></button>
+                        <label for="tuna-steak" class="food-label">Tuna Steak 100gr</label>
+                     </div>
+                  </div>
+               </div>
+               <div id="meal">
+                  <h4>Meal:</h4>
+                  <div id="choice-meal">
+                  </div>
+                  <div>
+                     <h4>Total Meal Calories</h4>
+                     <p><span id="total-meal-calories">0</span></p>
+                  </div>
+               </div>
             </div>
-        </div>
-    </main>
-    <footer>
-        <h5>Follow us in social media</h5>
-        <div id="social-media">
+         </div>
+      </main>
+      <footer>
+         <h5>Follow us in social media</h5>
+         <div id="social-media">
             <ul id="social-media-links">
                <li>
                   <a
@@ -148,11 +161,11 @@
                </li>
             </ul>
          </div>
-    </footer>
-    <script src="assets/js/script.js"></script>
-    <script
+      </footer>
+      <script src="assets/js/script.js"></script>
+      <script
          src="https://kit.fontawesome.com/3cc57474ff.js"
          crossorigin="anonymous"
-     ></script>
-</body>
+         ></script>
+   </body>
 </html>

@@ -3,12 +3,12 @@
 /*General styling*/
 
 label {
-    font-size: 10px;
-    font-weight: bold;
+	font-size: 10px;
+	font-weight: bold;
 }
 
 body {
-    min-height: 100vh;
+	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	font-family: 'Raleway', sans-serif;
@@ -17,135 +17,139 @@ body {
 h1,
 h2,
 h3 {
-    font-family: "Oswald";
+	font-family: "Oswald";
 }
+
 /**Header**/
 
 #name {
-    display: flex;
-    align-items: center;
-    border-bottom: solid;
+	display: flex;
+	align-items: center;
+	border-bottom: solid;
+	justify-content: center;
 }
 
 #logo {
-    height: 70px;
+	height: 70px;
 }
+
 /** Introduction section **/
 
 #introduction {
-    text-align: center;
+	text-align: center;
 }
+
 /**Personal information section **/
 
 #personal-information {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .information {
-    margin: 0.50em;
-    width: 10vw;
+	margin: 0.50em;
+	width: 10vw;
 }
 
 #sex {
-    margin: 8px;
+	margin: 8px;
 }
 
 /** Results section **/
 
 #results {
-    text-align: center;
+	text-align: center;
 }
 
 /** Meal Generator **/
 
-#meal-generator h2, 
+#meal-generator h2,
 h3,
 h4,
 p {
-    text-align: center;
+	text-align: center;
 }
 
 #meal-and-food-boxes {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 #food-choices {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
-.food-choise {
-    width: 75px;
-    height: 75px;
+.food-choice {
+	width: 75px;
+	height: 75px;
 }
 
-#choiced-meal {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+#choice-meal {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
 }
 
 /** Stiling of every food choise **/
 .button-display {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 #boiled-egg {
-    background: url(../images/boiled-egg.webp) no-repeat center center/cover;
+	background: url(../images/boiled-egg.webp) no-repeat center center/cover;
 }
 
 #bread-slice {
-    background: url(../images/bread-slice.webp) no-repeat center center/cover;
+	background: url(../images/bread-slice.webp) no-repeat center center/cover;
 }
 
 #broccoli {
-    background: url(../images/brocoli.webp) no-repeat center center/cover;
+	background: url(../images/brocoli.webp) no-repeat center center/cover;
 }
 
 #ham {
-    background: url(../images/ham.webp) no-repeat center center/cover;
+	background: url(../images/ham.webp) no-repeat center center/cover;
 }
 
 #babyleaf-salad {
-    background: url(../images/babyleaf-salad.jpg) no-repeat center center/cover; 
+	background: url(../images/babyleaf-salad.webp) no-repeat center center/cover;
 }
 
 #meat-stake {
-    background: url(../images/meat-stake.webp) no-repeat center center/cover;
+	background: url(../images/meat-stake.webp) no-repeat center center/cover;
 }
 
 #pasta {
-    background: url(../images/pasta.webp) no-repeat center center/cover;
+	background: url(../images/pasta.webp) no-repeat center center/cover;
 }
 
 #rice {
-    background: url(../images/rice.webp) no-repeat center center/cover;
+	background: url(../images/rice.webp) no-repeat center center/cover;
 }
 
 #slice-cheese {
-    background: url(../images/slice-cheese.webp) no-repeat center center/cover;
+	background: url(../images/slice-cheese.webp) no-repeat center center/cover;
 }
 
 #tuna-steak {
-    background: url(../images/tuna-steak.webp) no-repeat center center/cover;
+	background: url(../images/tuna-steak.webp) no-repeat center center/cover;
 }
 
 /**Footer**/
 
 footer {
-    background-color: black;
+	background-color: black;
 }
 
 footer h5 {
-    text-align: center;
-    color: white;
+	text-align: center;
+	color: white;
 }
 
 #social-media-links {
@@ -153,68 +157,66 @@ footer h5 {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
-    padding-left: 0px;
+	padding-left: 0px;
 }
 
 footer a {
-    color: white;
+	color: white;
 }
 
 /** Media query for devices wider than 768 px **/
-@media screen and (min-width: 768px){
-    /**General*/
-    
-    body {
-        margin: 0 8vw;
-    }
+@media screen and (min-width: 768px) {
+	/**General*/
 
-    /**Header*/
+	body {
+		margin: 0 8vw;
+	}
 
-    #name {
-        justify-content: center;
-    }
-    #logo {
-        margin: 0 1vw;
-    }
+	/**Header*/
 
-    /**Introduction Section*/
+	#logo {
+		margin: 0 1vw;
+	}
 
-    #introduction p {
-        margin: 3vw 3vw;
-    }
+	/**Introduction Section*/
 
-    /**Meal Generator**/
+	#introduction p {
+		margin: 3vw 3vw;
+	}
 
-    .food-choise {
-        width: 100px;
-        height: 100px;
-        margin: 5px 2vw;
-    }
+	/**Meal Generator**/
+
+	.food-choice {
+		width: 100px;
+		height: 100px;
+		margin: 5px 2vw;
+	}
 }
 
 /** Media query for devices wider than 1020 px **/
 @media screen and (min-width: 1020px) {
-    /**General**/
-    body {
-        font-size: x-large;
-    }
 
-    label {
-        font-size: 14px;
-    }
+	/**General**/
+	body {
+		font-size: x-large;
+	}
 
-    /**Header**/
-    #logo {
-        height: 90px;
-    }
+	label {
+		font-size: 14px;
+	}
 
-    /**Introduction section**/
-    .information {
-        margin: 11px;
-        width: 46px;
-    }
+	/**Header**/
+	#logo {
+		height: 90px;
+	}
 
-    #introduction p {
-        margin: 24px 56px;
-    }
+	/**Introduction section**/
+	.information {
+		margin: 11px;
+		width: 46px;
+	}
+
+	#introduction p {
+		margin: 24px 56px;
+	}
 }
