@@ -141,6 +141,8 @@ The page is going to be divided into two sections. The first one is a  that will
     - No errors were found in W3C (Jigsaw) validator.
   - Accessibility
     - Perform a lighthouse test.
+
+    ![Image of lighthouse results: performance 99, accessibility 100, best practices 100, 80 SEO](/assets/images/lighthouse-results.webp)
   - Java Script
     - ESLint was used and no errors were found.
 
