@@ -118,8 +118,25 @@ The page is going to be divided into two sections. The first one is a  that will
     - Adds the caloric value to the Total Meal Calories section.
     - The message alert shows every time the user surpass the limit, even if the pass it and press another food choice again it will show again with a higer value to reduce in the meal.
   - **Chosen Meal Buttons**
-    - Clicking the chosen food on the meal section removes the option
+    - Clicking the chosen food in the meal section removes the option
     - Subtract the value on the total meal calories section.
+
+## Bugs
+**SolvedBugs**
+  - It was allowed to add negative numbers in the personl information buttons calculating negative or to small meals per calories values making all the values of the food choices send the alert of surpassing the caloric needs. In the calculateCalories fucntion was added a several && operators in the if statement so it will compare the standard values of a 7 years old female (minimun wirght of 10 kilograms, minimun height of 90 centimeters, minimun age of 7), in case that the minimun requirements aren't acomplish it wont make the calculation and trow an alert message telling wich ones are and try it agains. Code added: 
+   if (sex === "man" && weight >= 10 && height >= 90 && age >= 7) {
+      dailyCalories.innerHTML = manCalculation;
+      calculateCaloricDeficit(dailyCalories.innerText);
+      foodChoices.style.display = "flex"
+   } else if (sex === "woman" && weight >= 10 && height >= 90 && age >= 7) {
+      dailyCalories.innerHTML = womanCalculation;
+      calculateCaloricDeficit(dailyCalories.innerText);
+   } else {
+      alert "Insert right values to make the calculation. Weight have to be a minimun of 22 kilograms, minimun height 90 and minimun age of 7 years"
+   }
+
+  - The food choices didn't appear hidden wen the document was first loaded. Add the stily.display methos to the foodChoices with a value of "none" wen the page loades so it remain hidden like this: foodChoices.style.display = "none"
+ 
 
 
 
