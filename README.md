@@ -1,6 +1,6 @@
 # Meal Generator
 
-One of the most difficult things about doing a diet is to make a meal that matches the calories needed and has the things that you like it's, or at least close to it. The purpose of this project is to create a web page that helps people create a meal for their diet given a selection of food choices like meat, rice, eggs, and others so the user can choose what they want and it will calculate the caloric value and compare with the amount of calories they need checking if it's going to break the diet or not.
+One of the most difficult things about doing a diet is to make a meal that matches the calories needed and has the things you like or, at least, close to it. The purpose of this project is to create a web page that helps people create a meal for their diet given a selection of food choices like meat, rice, eggs, and others so the user can choose what they want and it will calculate the caloric value and compare with the amount of calories they need checking if it's going to break the diet or not.
 
 The page is going to be divided into two sections. The first one is a  that will ask the user their weight, height, physical activity and age so it can calculate the amount of calories needed daily, then calculate the amount of calories needed to generate caloric deficits making them lose weight and finally calculate the amount of calories per meal. The second section will be the meal generator, here there is going to be one section with the food choices, when clicked they will go to the meal section, underneath the meal section there is going to be a calorie calculator telling the user how many calories this meal will have. The calories of the meal are going to be compared with the result of the calories per meal, calculated previously, in the case that surpasses the calories per meal it's going to show a warning message to the user saying how many calories they need to take off from the selected meal. 
 
@@ -74,9 +74,12 @@ The page is going to be divided into two sections. The first one is a  that will
 - **Total Meal Calories**
     - In this section, we calculate the amount of calories between all the food choices in the meal section and display it.
     - In the case the user surpasses the calories per meal an alert message is going to appear telling the user that they pass the amount of calories per meal and advise them to reduce the food choices in the meal section and how many calories they need to take from the meal. 
+    - When the user surpasses the amount of Calories per meal the Reduce Calories div is going to appear telling the user how many calories they exceed it. Once the user removes enough food choices this div is going to disappear.
 
     ![image of the Total calories without any meal chosen](/assets/images/total-calories-0.webp)
     ![image of the Total calories of a chosen meal, value of 435](/assets/images/total-calories.webp)
+    ![image of the Reduce Calories when it appears](/assets/images/reduce-calories.webp)
+    ![image of the Reduce Calories when it disappears](/assets/images/reduce-calories-removed.webp) 
 
 - **Footer**
     - It has links to social media and will open in a new tab. This is made to engage the user.
