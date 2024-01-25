@@ -44,24 +44,42 @@ function calculateCalories() {
    const dailyCalories = document.getElementById("daily-calories");
    const foodChoices = document.getElementById("food-choices");
    const error = document.getElementById("error");
+   const choicedMeal = document.getElementById("choice-meal");
+   const caloricDeficit = document.getElementById("caloric-deficit");
+   const reduceCalories = document.getElementById("reduce-calories");
+   const mealCalories = document.getElementById("calories-per-meal");
+   
+
+   // Reset total-meal-calories and amount-of-calories-to-reduce
+   const totalMealCaloriesElement = document.getElementById("total-meal-calories");
+   totalMealCaloriesElement.innerHTML = '0';
+ 
+   const reduceCaloriesElement = document.getElementById("amount-of-calories-to-reduce");
+   reduceCaloriesElement.innerHTML = '0';
 
    let manCalculation = (10 * weight) + (6.25 * height) - (5 * age) + 5;
    let womanCalculation = (10 * weight) + (6.25 * height) - (5 * age) - 161;
 
+   // Reset all sections
+   choicedMeal.innerHTML = '';
+   caloricDeficit.innerHTML = '0';
+   dailyCalories.innerHTML = '0';
+   mealCalories.innerHTML = '0';
+   reduceCalories.style.display = 'none';
 
    if (sex === "man" && weight >= 10 && height >= 90 && age >= 7) {
-       dailyCalories.innerHTML = manCalculation;
-       calculateCaloricDeficit(dailyCalories.innerText);
-       foodChoices.style.display = "flex";
-       error.style.display = "none";
-   } else if (sex === "woman" && weight >= 10 && height >= 90 && age >= 7) {
-       dailyCalories.innerHTML = womanCalculation;
-       calculateCaloricDeficit(dailyCalories.innerText);
-       error.style.display = "none";
-   } else {
-       error.style.display = "block"
-   }
-
+      dailyCalories.innerHTML = manCalculation;
+      calculateCaloricDeficit(dailyCalories.innerText);
+      foodChoices.style.display = "flex";
+      error.style.display = "none";
+  } else if (sex === "woman" && weight >= 10 && height >= 90 && age >= 7) {
+      dailyCalories.innerHTML = womanCalculation;
+      calculateCaloricDeficit(dailyCalories.innerText);
+      error.style.display = "none";
+  } else {
+      error.style.display = "block";
+      removeReduceCalories(); // Hide reduce calories when error occurs
+  }
 }
 
 /**
@@ -114,7 +132,9 @@ function compareCalories(num) {
    if (caloriesInMeal > caloriesPerMeal) {
       caloriesToReduce.style.display = "block";
       reduceCalories.innerHTML = amountOfCaloriesToReduce + reduce;
-   } 
+   } else {
+      caloriesToReduce.style.display = "none";
+   }
 }
 
 

@@ -131,11 +131,18 @@ The page is going to be divided into two sections. The first one is a  that will
 **SolvedBugs**
   - It was allowed to add negative numbers in the personal information buttons calculating negative or small meals per calorie values making all the values of the food choices send the alert of surpassing the caloric needs. In the calculationCalories function was added several && operators were in the if statement so it will compare the standard values of a 7 years old female (minimum weight of 10 kilograms, minimum height of 90 centimeters, minimum age of 7), in case the minimum requirements aren't accomplished it won't make the calculation and throw an alert message telling which ones are and try it again. 
   
-    Code added: 
+    Added code: 
 
     ![image of the code correction](/assets/images/code-correction.webp)
 
-  - The food choices didn't appear hidden when the document was first loaded. Add the stily.display methods to the foodChoices with a value of "none" when the page loads so it remains hidden like this: foodChoices.style.display = "none"
+  - The food choices didn't appear hidden when the document was first loaded. Add the stily. display methods to the foodChoices with a value of "none" when the page loads so it remains hidden like this: foodChoices.style.display = "none"
+
+  - After calculating and creating a meal if the user wanted to make a new one, the previous caloric calculations, meal and total meal calories didn't reset. To fix this in the CalculateCalories function I added variables for the Total Meal Counter and Amount of Calories to reduce and change the innerHTML to 0. Also, the Chosen meal Caloric Deficit, Daily Calories and Meal Calories innerHTML were modified.
+
+    Added code:
+
+    ![image of the code correction](/assets/images/correction-bug-calculate-calories.webp)
+
 
  **Validator Testing**
   - HTML
