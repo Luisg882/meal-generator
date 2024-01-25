@@ -24,10 +24,10 @@ The page is going to be divided into two sections. The first one is a  that will
     - This information is used later to calculate the amount of daily calories, caloric deficit and how many calories they need per meal.
     - A Calculate button is going to trigger the JavaScript to make this calculation.
     - Each of the inputs will have a validation: weight is a minimum of 10 kilograms, height a minimum of 90 centimeters and a minimum age of 7. All these values are standards for a 7-year girl.
-    - In case the values are lesser than the minimum requirement the calculation is not going to happen and an alert message is going to show saying "Insert the right values to make the calculation. Weight has to be a minimum of 22 kilograms, minimum height 90 and minimum age of 7 years".
+    - In case the values are lesser than the minimum requirement the calculation is not going to happen an error div is going to appear indicating the minimum values accepted.
     
     ![image of the personal information section showing the weight, height, age, sex and the submit button](/assets/images/personal-information.webp)
-    ![image of the alert message when the minimum values don't correspond](/assets/images/alert-message-personal-information.webp)
+    ![image of the error section saying: "Error. Insert the right values to make the calculation. Weight has to be a minimum of 22 kilograms, minimum height 90 and minimum age of 7 years"](/assets/images/error.webp)
 
 - **Daily Calories**
     - In this section, we calculate the number of calories needed by following the basal metabolic rate (BMR), which is 10 * weight (kg) + 6.25 * height(cm) - 5 * age(y) + 5 for man and 10 * weight(kg) + 6.25 * height(cm) - 5 * age(y) - 161 for ​woman, with the personal information taking before.

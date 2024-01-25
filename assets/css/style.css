@@ -102,6 +102,14 @@ p {
 	justify-content: space-around;
 }
 
+#reduce-calories {
+	background-color: red;
+	color: #fff;
+	text-align: center;
+    padding: 9px 5px;
+	margin-top: 15px;
+}
+
 /** Stiling of every food choise **/
 .button-display {
 	display: flex;
@@ -204,6 +212,10 @@ footer a {
 		width: 100px;
 		height: 100px;
 		margin: 5px 2vw;
+	}
+
+	#reduce-calories{
+		margin: 10px 15vw;
 	}
 }
 

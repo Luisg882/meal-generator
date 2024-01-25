@@ -8,8 +8,11 @@ document.addEventListener("DOMContentLoaded", function() {
    const choicedMeal = document.getElementById("choice-meal");
    const foodChoices = document.getElementById("food-choices");
    const error = document.getElementById("error");
+   const reduceCalories = document.getElementById("reduce-calories");
    foodChoices.style.display = "none";
    error.style.display = "none";
+   reduceCalories.style.display = "none";
+
 
    for (let button of foodButtons) {
        button.addEventListener("click", function() {
@@ -49,10 +52,12 @@ function calculateCalories() {
    if (sex === "man" && weight >= 10 && height >= 90 && age >= 7) {
        dailyCalories.innerHTML = manCalculation;
        calculateCaloricDeficit(dailyCalories.innerText);
-       foodChoices.style.display = "flex"
+       foodChoices.style.display = "flex";
+       error.style.display = "none";
    } else if (sex === "woman" && weight >= 10 && height >= 90 && age >= 7) {
        dailyCalories.innerHTML = womanCalculation;
        calculateCaloricDeficit(dailyCalories.innerText);
+       error.style.display = "none";
    } else {
        error.style.display = "block"
    }
@@ -101,11 +106,15 @@ function mealCaloriesCounter(num) {
 function compareCalories(num) {
    const caloriesPerMeal = parseInt(document.getElementById("calories-per-meal").innerText);
    const caloriesInMeal = parseInt(num.innerText);
+   const caloriesToReduce = document.getElementById("reduce-calories");
+   const reduceCalories = document.getElementById("amount-of-calories-to-reduce");
+   const amountOfCaloriesToReduce = parseInt(document.getElementById("amount-of-calories-to-reduce").innerText)
 
    let reduce = caloriesInMeal - caloriesPerMeal
    if (caloriesInMeal > caloriesPerMeal) {
-       alert(`Is to much. You have to reduce ${reduce}`)
-   }
+      caloriesToReduce.style.display = "block";
+      reduceCalories.innerHTML = amountOfCaloriesToReduce + reduce;
+   } 
 }
 
 
@@ -113,9 +122,34 @@ function compareCalories(num) {
 /**
 * This function will subtract the calories from the total 
 * meal calories when the user removes the food selected from
-* the meal chosen meal
+* the meal chosen meal and update the amount of calories that have
+* to reduce
 */
 function removeTotal(num) {
+   const totalMealCaloriesElement = document.getElementById("total-meal-calories");
+   const totalMealCalories = parseInt(totalMealCaloriesElement.innerText);
+   const reduceCaloriesElement = document.getElementById("amount-of-calories-to-reduce");
+   let amountOfCaloriesToReduce = parseInt(reduceCaloriesElement.innerText);
+
+   amountOfCaloriesToReduce = Math.max(amountOfCaloriesToReduce - num, 0);
+
+   totalMealCaloriesElement.innerHTML = totalMealCalories - num;
+   reduceCaloriesElement.innerHTML = amountOfCaloriesToReduce;
+
+   removeReduceCalories();
+}
+
+/**
+ * This function is going to remove the Reduce calories
+ * section wen he total meal calories doesn't pass the calories 
+ * per meal
+ */
+function removeReduceCalories() {
    const totalMealCalories = parseInt(document.getElementById("total-meal-calories").innerText);
-   document.getElementById("total-meal-calories").innerHTML = totalMealCalories - parseInt(num);
+   const caloriesToReduce = document.getElementById("reduce-calories");
+   const caloriesPerMeal = parseInt(document.getElementById("calories-per-meal").innerText);
+
+   if (totalMealCalories < caloriesPerMeal) {
+      caloriesToReduce.style.display = "none";
+   }
 }
