@@ -62,6 +62,14 @@ h3 {
 	text-align: center;
 }
 
+#error {
+	background-color: red;
+	color: #fff;
+	text-align: center;
+    padding: 9px 5px;
+	margin-top: 15px;
+}
+
 /** Meal Generator **/
 
 #meal-generator h2,
@@ -182,6 +190,12 @@ footer a {
 
 	#introduction p {
 		margin: 3vw 3vw;
+	}
+
+	/**Error section**/
+
+	#error {
+		margin: 10px 15vw;
 	}
 
 	/**Meal Generator**/

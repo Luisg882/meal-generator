@@ -7,7 +7,9 @@ document.addEventListener("DOMContentLoaded", function() {
    const foodButtons = document.getElementsByClassName("food-choice");
    const choicedMeal = document.getElementById("choice-meal");
    const foodChoices = document.getElementById("food-choices");
-   foodChoices.style.display = "none"
+   const error = document.getElementById("error");
+   foodChoices.style.display = "none";
+   error.style.display = "none";
 
    for (let button of foodButtons) {
        button.addEventListener("click", function() {
@@ -38,6 +40,7 @@ function calculateCalories() {
    const sex = document.getElementById("sex").value;
    const dailyCalories = document.getElementById("daily-calories");
    const foodChoices = document.getElementById("food-choices");
+   const error = document.getElementById("error");
 
    let manCalculation = (10 * weight) + (6.25 * height) - (5 * age) + 5;
    let womanCalculation = (10 * weight) + (6.25 * height) - (5 * age) - 161;
@@ -51,8 +54,7 @@ function calculateCalories() {
        dailyCalories.innerHTML = womanCalculation;
        calculateCaloricDeficit(dailyCalories.innerText);
    } else {
-       alert `Insert the right values to make the calculation. Weight has to be a minimum of
-        22 kilograms, minimum height 90 and minimum age of 7 years`
+       error.style.display = "block"
    }
 
 }
